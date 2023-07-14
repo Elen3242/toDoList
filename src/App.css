@@ -17,6 +17,20 @@ body {
     position: relative;
 }
 
+.taskNumber {
+    color: blueviolet;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 26px ;
+    height: 26px;
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
 .taskBg .done .taskText{
     text-decoration: line-through;
     opacity: 0.3;
