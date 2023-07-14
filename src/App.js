@@ -53,7 +53,8 @@ function App() {
             {/* this code run when tasks absence  */}
             {toDo && toDo.length ? '' : "No tasks..."} 
 
-            {toDo && toDo
+            {toDo && toDo 
+                .sort((a, b) => a.id > b.id ? 1 : -1) //when changing object places (1,2obj) do not change their places in page
                 .map (( task , index) => {
                     return (
                         <React.Fragment key={task.id}>
@@ -64,19 +65,18 @@ function App() {
                                 </div>
 
                                 <div className="iconsWrap">
-                                    <span>
+                                    <span title="Completed / Not Completed">
                                         <FontAwesomeIcon icon={faCircleCheck} />
                                     </span>
-                                    <span>
+                                    <span title="Edit">
                                         <FontAwesomeIcon icon={faPen} />
                                     </span>
-                                    <span>
+                                    <span title="Delete">
                                         <FontAwesomeIcon icon={faTrashCan} />
                                     </span>
                                 </div>
                             </div>
                              
-                            
                         </React.Fragment>
                     )
                 })
