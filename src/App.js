@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React ,{ useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCircle , faPen , faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import './app.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    //tasks 
+    const [toDO , setToDo] = useState ([
+        {"id": 1, "title": 'Task 1' , "status": false},
+        {"id": 2, "title": 'Task 2' , "status": false}
+    ]);
+
+    //temp state 
+    const [newTask , setNewTask ] = useState('');
+    const [updateData , setUpdateData] = useState('')
+
+    //add task
+    const addTask = () => {
+
+    }
+
+    //delete task
+    const deleteTask = (id) => {
+
+    }
+
+    //markDone
+    const markDone = (id) => {
+
+    }
+
+    //cancelUpdate
+    const cancelUpdate = (id) => {
+
+    }
+
+    //change Task for update
+    const changeTask = (e) => {
+
+    }
+
+        return (
+            <div className="container App">
+            <br></br>
+            <h2>To Do List App</h2>
+            </div>
+        )
 }
 
 export default App;
