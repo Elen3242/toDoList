@@ -1,11 +1,10 @@
 import React ,{ useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCircle , faPen , faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCircleCheck , faPen , faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import './app.css';
 
 function App() {
-
     //tasks 
     const [toDo , setToDo] = useState ([
         {"id": 1, "title": 'Task 1' , "status": false},
@@ -62,6 +61,18 @@ function App() {
                                 <div className={task.status ? 'done' : ''}>
                                     <span className="taskNumber">{index + 1} </span>
                                     <span className="taskText">{task.title} </span>
+                                </div>
+
+                                <div className="iconsWrap">
+                                    <span>
+                                        <FontAwesomeIcon icon={faCircleCheck} />
+                                    </span>
+                                    <span>
+                                        <FontAwesomeIcon icon={faPen} />
+                                    </span>
+                                    <span>
+                                        <FontAwesomeIcon icon={faTrashCan} />
+                                    </span>
                                 </div>
                             </div>
                              
